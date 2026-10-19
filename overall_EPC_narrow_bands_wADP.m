@@ -216,8 +216,8 @@ if strcmp(ADP,'yes')
                  temp = D_adp_VB(p,p) ;
                  D_adp_VB = temp;
             end
-            D_adp_h_M = D_adp_VB;
         end
+        D_adp_h_M = D_adp_VB;
     else
         if exist('bands_transp','var') && isempty(bands_transp) == 0
             if min(CB_idx)>min(bands_transp) || max(CB_idx)<max(bands_transp)
