@@ -6,7 +6,8 @@ EPIC contains a suite of scripts that can be used to compute the electron-phonon
 The current version of EPIC is under development and testing.
 
 To be used:
-- After having run the phonon calculations, for each q-point of interest (typically Gamma and zone boundary) and phonon branch or mode, modulate the structure and run, for each q-point/mode pair run a scf and nscf calc. and then save the bandstructure in the bxsf format. You find example files in the examples_for_VASP_phonopy directory.
+- After having run the phonon calculations, for each q-point of interest (typically Gamma and zone boundary) and phonon branch or mode, modulate the structure and run, for each q-point/mode pair run a scf and nscf calc. and then save the bandstructure in the bxsf format. You find example files in the examples_for_VASP_phonopy directory. The bash script make_n_run creates a directory named modulations and in that it creates a directory for each q-point/mode pair, plus a directory for the ADP; and launch them all the runs. You must before launche
+
 - Copy in the modulations directory the scripts:  analyze_extract_bands_DefPot.sh bands_mod_extract_DefPot_narrowbands_shifted_script_L.m  bxsf_to_ELECTRA_shifting_option.m  shifting_bands.m
 - Now, you fill the analyze_extract_bands_DefPot.sh with the proper data, current lines 14-22. You must edit
      - n_q → number of q-points considered
