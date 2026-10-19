@@ -9,12 +9,12 @@ To be used:
 - After having run the phonon calculations, for each q-point of interest (typically Gamma and zone boundary) and phonon branch or mode, modulate the structure and run, for each q-point/mode pair run a scf and nscf calc. and then save the bandstructure in the bxsf format. You find example files in the examples_for_VASP_phonopy directory.
 - Copy in the modulations directory the scripts:  analyze_extract_bands_DefPot.sh bands_mod_extract_DefPot_narrowbands_shifted_script_L.m  bxsf_to_ELECTRA_shifting_option.m  shifting_bands.m
 - Now, you fill the analyze_extract_bands_DefPot.sh with the proper data, current lines 14-22. You must edit
-      - n_q → number of q-points considered
-      - n_modes → nu,ber of modes you are interested in
-      - n_atoms → number of atoms in the POSCAR or other structure file
-      - modes_to_skip → if you want to avoid some modes
-      - fileName_bxsf → the name of the bxsf file, use the form as in the provided file "'name'"
-      - material_name → name of the material you will use for subsequent ELECTRA run
+     - n_q → number of q-points considered
+     - n_modes → nu,ber of modes you are interested in
+     - n_atoms → number of atoms in the POSCAR or other structure file
+     - modes_to_skip → if you want to avoid some modes
+     - fileName_bxsf → the name of the bxsf file, use the form as in the provided file "'name'"
+     - material_name → name of the material you will use for subsequent ELECTRA run
      - E_band_window → you can change the energy range, in ev
      - labels_q → you can list the labels of the q-point to further save in table format
      - force_metallic → to force a semimetal or very narrow gap bandstructure to be treated as metallic, to allow scattering transition through the narrow gap if the phonon energy is larger than the gap - the system will must be set as metallic in ELECTRA calc.. In case, it must be "'yes'", otherwise "'no'"
