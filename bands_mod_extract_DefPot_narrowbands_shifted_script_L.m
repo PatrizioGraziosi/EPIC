@@ -2,7 +2,7 @@
 % file, in the modulations directory where the mod-001... dirs are.
 % in case of ADP, the ADP dirs must be in the modulations dir as well.
 
-force_metallic = 'yes' ; % to ensure the system is treated as metallic even if a small gap is detected, useful fo rnarrow gap materials or semimetals
+%force_metallic = 'yes' ; % to ensure the system is treated as metallic even if a small gap is detected, useful fo rnarrow gap materials or semimetals
 
 modes_info
 %
