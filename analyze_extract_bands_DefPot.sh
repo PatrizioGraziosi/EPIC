@@ -17,14 +17,14 @@ n_atoms=24
 modes_to_skip=0
 fileName_bxsf="'HH24.bxsf'"
 material_name="'HH24'"
-fileName="modes_info.m"
 E_band_window=2 # in eV, range beyond the band edge where the bands are considered, it is related to what you need in transport simulations, for semicondcuctors it is easilt 0.5, for metals likely needs to be wider
 labels_q="{'G', 'X', 'T', 'W', 'S', 'R' }" # q-point labels for the tables
+force_metallic="'yes'"  # to ensure the system is treated as metallic even if a small gap is detected, useful fo rnarrow gap materials or semimetals
 
-
+fileName="modes_info.m"
 total_modes=$((n_atoms*3))
 
-printf " n_q = $n_q; \n n_modes = $n_modes; \n n_atoms = $n_atoms; \n total_modes = $total_modes; \n modes_to_skip = $modes_to_skip; \n fileName = $fileName_bxsf; \n material_name = $material_name; \n E_band_window = $E_band_window ; \n labels_q = $labels_q ; \n" > $fileName
+printf " n_q = $n_q; \n n_modes = $n_modes; \n n_atoms = $n_atoms; \n total_modes = $total_modes; \n modes_to_skip = $modes_to_skip; \n fileName = $fileName_bxsf; \n material_name = $material_name; \n E_band_window = $E_band_window ; \n labels_q = $labels_q ; \n force_metallic = $force_metallic ; \n " > $fileName
 
 
 module load profile/eng
